@@ -1,7 +1,7 @@
 404-Replacement-with-301-Redirect-To-Homepage
 =============================================
 
-This module overrides 404 page with 301 permanent redirect to homepage in Magento which is sometime required by SEO team to remove URLs
+This module overrides [404 page with 301 permanent redirect to homepage](http://www.magentocommerce.com/magento-connect/404-replacement-with-301-redirect-to-homepage.html) in Magento which is sometime required by SEO team to remove URLs
 
 404 Replacement with 301 Redirect To Homepage
 
