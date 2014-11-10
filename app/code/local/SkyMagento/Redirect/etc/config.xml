@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SkyMagento_Redirect>
+            <version>0.1.0</version>
+        </SkyMagento_Redirect>
+    </modules>
+    
+	<global>
+		<blocks>
+			<redirect>
+				<class>SkyMagento_Redirect_Block</class>
+			</redirect>
+		</blocks>
+		<models>
+			<redirect>
+				<class>SkyMagento_Redirect_Model</class>
+			</redirect>
+		</models>
+		<helpers>
+			<redirect>
+				<class>SkyMagento_Redirect_Helper</class>
+			</redirect>
+		</helpers>
+		<resources>
+			<redirect_setup>
+				<setup>
+					<module>SkyMagento_Redirect</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</redirect_setup>
+		</resources>
+	</global>
+	<adminhtml>     
+		<translate>
+			<modules>
+				<SkyMagento_Redirect>
+					<files>
+						<default>SkyMagento_Redirect.csv</default>
+					</files>
+				</SkyMagento_Redirect>
+			</modules>
+		</translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <redirect translate="title" module="redirect">
+                                            <title>404 Redirect Replacement With 301 Permanent Redirect</title>
+                                        </redirect>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <frontend>
+        <routers>
+            <cms>
+                <args>
+                    <modules>
+                        <SkyMagento_Redirect before="Mage_Cms">SkyMagento_Redirect</SkyMagento_Redirect>
+                    </modules>
+                </args>
+            </cms>
+        </routers>
+    </frontend>
+    <default>
+        <redirect>            
+            <settings>
+				<status>1</status>
+            </settings>
+        </redirect>
+    </default>
+</config>

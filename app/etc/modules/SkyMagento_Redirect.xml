@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<SkyMagento_Redirect>
+			<active>true</active>
+			<codePool>local</codePool>
+		</SkyMagento_Redirect>
+	</modules>
+</config>
